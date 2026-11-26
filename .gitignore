@@ -1,0 +1,31 @@
+# Per-installation settings and credentials
+config.json
+.session-secret
+.env*
+.dev.vars*
+.npmrc
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Installed dependencies, generated output and caches
+node_modules/
+.npm/
+.wrangler/
+.cache/
+dist/
+coverage/
+*.log
+
+# Application data and database exports
+imghost-vps/uploads/*
+!imghost-vps/uploads/.gitkeep
+!imghost-vps/uploads/.htaccess
+!imghost-vps/uploads/README.txt
+*.sql
+*.sql.gz
+*.dump
+
+.DS_Store
+Thumbs.db

@@ -1,0 +1,16 @@
+{
+  "name": "imagehost-codegen",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Cloudflare Access protected private image-host code generator",
+  "engines": { "node": ">=22.0.0" },
+  "scripts": {
+    "check": "node --check src/index.js && node --check src/ui.js && node --check src/script.js",
+    "test": "node --test",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "dry-run": "wrangler deploy --dry-run"
+  },
+  "devDependencies": { "wrangler": "^4.0.0" }
+}

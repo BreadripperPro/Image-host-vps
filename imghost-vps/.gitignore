@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+.npm/
+.wrangler/
+.cache/
+coverage/
+dist/
+
+# Local configuration + secrets (NEVER commit)
+config.json
+.session-secret
+.env*
+.dev.vars*
+*.pem
+*.key
+*.p12
+*.pfx
+*.sql
+*.sql.gz
+*.dump
+
+# Uploaded image files (binary data lives on disk, metadata lives in MySQL)
+uploads/*
+!uploads/.gitkeep
+!uploads/.htaccess
+!uploads/README.txt
+
+# Logs / OS noise
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db

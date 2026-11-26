@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "imagehost-codegen",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-26",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    { "pattern": "codes.example.com", "custom_domain": true }
+  ],
+  "vars": {
+    // Replace these example origins and the custom domain above before deploying.
+    "PUBLIC_ORIGIN": "https://codes.example.com",
+    "IMAGEHOST_ORIGIN": "https://images.example.com",
+    // Optional extra restriction. Empty means the Cloudflare Access policy
+    // decides who may use this Worker. Use comma-separated exact emails.
+    "ALLOWED_EMAILS": ""
+  },
+  "observability": { "enabled": false }
+}

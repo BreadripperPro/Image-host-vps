@@ -1,0 +1,22 @@
+{
+  "name": "personal-image-host",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal image hosting service for a VPS with local MariaDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "check": "node scripts/check.js",
+    "test": "node scripts/selftest.js && node scripts/codegen-test.js && node --test scripts/issuance-test.js scripts/update-test.js scripts/core-review-test.js scripts/deploy-review-test.js scripts/server-review-test.js scripts/browser-review-test.js",
+    "admin": "node scripts/admin.js",
+    "check-storage": "node scripts/check-storage.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^2.5.0",
+    "mysql2": "^3.11.0"
+  }
+}

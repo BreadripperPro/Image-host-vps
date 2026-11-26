@@ -1,0 +1,25 @@
+[Unit]
+Description=Personal Image Host
+After=network.target mariadb.service
+Wants=mariadb.service
+
+[Service]
+Type=simple
+User=imagehost
+Group=imagehost
+WorkingDirectory=/opt/imagehost
+ExecStart=/usr/bin/node /opt/imagehost/index.js
+Environment=NODE_ENV=production
+Environment=NO_CONSOLE=1
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=10
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/opt/imagehost/uploads /opt/imagehost/.session-secret
+
+[Install]
+WantedBy=multi-user.target
